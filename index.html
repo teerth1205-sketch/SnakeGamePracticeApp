@@ -4,8 +4,65 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Snake</title>
+
     <style>
+
+
+
+
+/* body {
+  margin:0;
+  padding:0;
+  font-family: sans-serif;
+  background: linear-gradient(#141e30, #243b55);
+} */
+
+
+.snakeDiv {
+  position: left;
+  margin: 100px;
+}
+
+span {
+  position: absolute;
+  width: 20px;
+  height: 20px;
+  background: green;
+  opacity: 0.5;
+  border-radius: 20px;
+  animation: snake 1s infinite ease-in-out;
+  
+}
+
+span:nth-child(2){
+  left: 20px;
+  animation-delay: 0.2s;
+}
+
+span:nth-child(3){
+  left: 40px;
+  animation-delay: 0.4s;
+}
+
+span:nth-child(4){
+  left: 60px;
+  animation-delay: 0.6s;
+}
+
+span:nth-child(5){
+  left: 70px;
+  animation-delay: 0.8s;
+}
+
+@keyframes snake {
+  0% {opacity: 0.3; transform:translateY(0px);    box-shadow: 0px 0px 3px rgba(0, 0, 0, 0.1);}
+    50% {opacity: 1; transform: translateY(-10px); background:orange;  box-shadow: 0px 20px 3px rgba(0, 0, 0, 0.05);}
+    100%  {opacity: 0.3; transform:translateY(0px); box-shadow: 0px 0px 3px rgba(0, 0, 0, 0.1);}
+}
+ 
+
+
+
         body {
             min-height: 100vh;
             width: 100vw;
@@ -13,7 +70,7 @@
             justify-content: center;
             align-items: center;
             margin: 0;
-            background-color: black;
+            background-color: green;
         }
 
         #game-board {
@@ -38,6 +95,27 @@
     <script src="game.js" defer type="module"></script>
 </head>
 <body>
-    <div id="game-board"></div>
+   
+   
+ 
+    <!-- <form action="/my-handling-form-page" method="post">
+        <ul>
+         <li>
+           <label for="name">Name:</label>
+           <input type="text" id="name" name="user_name">
+         </li>
+         <li>
+           <label for="mail">E-mail:</label>
+           <input type="email" id="mail" name="user_email">
+         </li>
+         <li>
+           <label for="msg">Message:</label>
+           <textarea id="msg" name="user_message"></textarea>
+         </li>
+        </ul>
+       </form> -->
+      
+    <div id="game-board"> 
+        
 </body>
 </html>
